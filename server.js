@@ -8,6 +8,7 @@ const videroutes = require('./Routes/VideoRoutes')
 const { response } = require('express')
 const helmet  = require('helmet')
 const path = require('path')
+import ip from "ip"
 
 
 
@@ -26,6 +27,7 @@ console.log(path.join(__dirname,"Videos"))
 app.listen(port,()=>{
 
     console.log(`Server listening at ${port}`)
+     console.dir ( ip.address() );
 })
 
 
